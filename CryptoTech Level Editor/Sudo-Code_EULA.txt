@@ -1,0 +1,106 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
+{\fonttbl\f0\fswiss\fcharset0 ArialMT;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid1\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listlevel\levelnfc4\levelnfcn4\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{lower-alpha\}.}{\leveltext\leveltemplateid2\'02\'01.;}{\levelnumbers\'01;}\fi-360\li1440\lin1440 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww25400\viewh13340\viewkind0
+\deftab720
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth12160\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrs\brdrw20\brdrcf0 \clbrdrl\brdrs\brdrw20\brdrcf0 \clbrdrb\brdrs\brdrw20\brdrcf0 \clbrdrr\brdrs\brdrw20\brdrcf0 \clpadt140 \clpadl140 \clpadb140 \clpadr140 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sa106\qc
+
+\f0\b\fs30 \cf0 End User License Agreement (EULA)
+\f1\b0\fs24 \
+\pard\intbl\itap1\pardeftab720
+\cf0 \
+\pard\intbl\itap1\pardeftab720
+
+\f0\b\fs26 \cf0 PLEASE READ CAREFULLY BEFORE USING THIS PRODUCT:
+\b0  This End-User License Agreement ("EULA") is a legal agreement between (a) you (either an individual or a single entity) and (b) Sudo-Code Software (\'93SCS\'94) that governs your use of any Software Product, installed on or made available by SCS.
+\f1\fs24 \
+
+\f0\b\fs26 BY CLICKING "I AGREE", OR BY TAKING ANY STEP TO INSTALL OR USE THE SOFTWARE PRODUCT, YOU (1) REPRESENT THAT YOU ARE OF THE LEGAL AGE OF MAJORITY IN YOUR STATE, PROVINCE JURISDICTION OF RESIDENCE AND, IF APPLICABLE, YOU ARE DULY AUTHORIZED BY YOUR EMPLOYER TO ENTER INTO THIS CONTRACT AND (2) YOU AGREE TO BE BOUND BY THE TERMS OF THIS EULA. IF YOU DO NOT ACCEPT THE EULA TERMS, DO NOT USE THE SOFTWARE PRODUCT.
+\f1\b0\fs24 \
+\
+\pard\intbl\itap1\tx220\tx720\pardeftab720\li720\fi-720
+\ls1\ilvl0
+\f0\b\fs26 \cf0 {\listtext	1.	}GRANT OF LICENSE.
+\b0  The Software Product includes two types of computer software (1) software that is owned by SCS (and may include associated media, and "online" or electronic documentation) (collectively the "Software Product") and (2) other software provided by third parties and used with the Software Product ("Third Party Software"). SCS grants you the following non-exclusive rights provided you agree to and comply with all terms and conditions of this EULA:\
+\pard\intbl\itap1\tx940\tx1440\pardeftab720\li1440\fi-1440
+\ls1\ilvl1
+\b \cf0 {\listtext	a.	}Use.
+\b0  You may use the Software Product on your computer (or computers if the Software Product is sold to you for use on multiple computers).. You may not use the Software Product on additional computers and do not have the right to distribute the Software Product. You agree to only use the Software Product as expressly permitted herein.\
+\ls1\ilvl1
+\b {\listtext	b.	}Reservation of Rights.
+\b0  The Software Product is licensed, not sold, to you by SCS. SCS and its suppliers own all right, title and interest in and to the Software Product and reserve all rights not expressly granted to you in this EULA. You agree to refrain from any action that would diminish such rights or would call them into question.\
+\ls1\ilvl1
+\b {\listtext	c.	}Third Party Software.
+\b0  Notwithstanding the terms and conditions of this EULA, all or any portion of the Software Product which constitutes Third Party Software, is licensed to you subject to the terms and conditions of the software license agreement accompanying such Third Party Software whether in the form of a discrete agreement, shrink wrap license or electronic license terms accepted at time of download. Use of the Third Party Software by you shall be governed entirely by the terms and conditions of such license.\
+\ls1\ilvl1
+\b {\listtext	d.	}Support.
+\b0  Technical support for the Software Product will be free for the first thirty (30) days after the activation date. Support will be available via e-mail or online chat during regular business hours AEST. After 30 days, Technical Support may be offered by SCS as a paid support service.\
+\pard\intbl\itap1\tx220\tx720\pardeftab720\li720\fi-720
+\ls1\ilvl0
+\b \cf0 {\listtext	2.	}UPGRADES.
+\b0  To use a Software Product identified by SCS as an upgrade, you must first be licensed for the original Software Product identified by SCS as eligible for the upgrade. After upgrading, you may no longer use the original Software Product that formed the basis for your upgrade eligibility and the upgraded software shall be deemed the "Software Product".\
+\ls1\ilvl0
+\b {\listtext	3.	}ADDITIONAL SOFTWARE.
+\b0  This EULA applies to updates or supplements to the original Software Product provided by SCS unless SCS provides other terms along with the update or supplement. In case of a conflict between such terms, the other terms will prevail.\
+\ls1\ilvl0
+\b {\listtext	4.	}TRANSFER.
+\b0 \
+\pard\intbl\itap1\tx940\tx1440\pardeftab720\li1440\fi-1440
+\ls1\ilvl1
+\b \cf0 {\listtext	a.	}Third Party.
+\b0  The Software Product may only be transferred to another end user as part of a transfer of the computer(s) on which it is installed. Any transfer must include all component parts, media, printed materials and this EULA. Prior to the transfer, the end user receiving the transferred product must agree to all the EULA terms. Upon transfer of your computer(s), your license is automatically terminated and you are no longer permitted to use the Software Product.\
+\ls1\ilvl1
+\b {\listtext	b.	}Restrictions. 
+\b0 You may not rent, lease or lend the Software Product or use the Software Product for commercial timesharing or bureau use. You may not sublicense, assign or transfer the license or Software Product except as expressly provided in this EULA.\
+\pard\intbl\itap1\tx220\tx720\pardeftab720\li720\fi-720
+\ls1\ilvl0
+\b \cf0 {\listtext	5.	}PROPRIETARY RIGHTS.
+\b0  All intellectual property rights in the Software Product and user documentation are owned by SCS or its suppliers and are protected by law, including but not limited to copyright, trade secret, and trademark law, as well as other applicable laws and international treaty provisions. The structure, organization and code of the Software Product are the valuable trade secrets and confidential information of SCS and its suppliers. You shall not remove any product identification, copyright notices or proprietary restrictions from the Software Product.\
+\ls1\ilvl0
+\b {\listtext	6.	}LIMITATION ON REVERSE ENGINEERING.
+\b0  Except to the extent that such restriction is not permitted under applicable law, you are not permitted (and you agree not to) create derivative works of or modify the Software Product. You may reverse engineer, decompile or disassemble, on condition of previously stated limitations.Nothing contained herein shall be construed, expressly or implicitly, as transferring any right, license or title to you other than those explicitly granted under this EULA. SCS reserves all rights in its intellectual property rights not expressly agreed to herein. Unauthorized copying of the Software Product or failure to comply with the restrictions in this EULA (or other breach of the license herein) will result in automatic termination of this Agreement and you agree that it will constitute immediate, irreparable harm to SCS for which monetary damages would be an inadequate remedy, and that injunctive relief will be an appropriate remedy for such breach.\
+\ls1\ilvl0
+\b {\listtext	7.	}TERM.
+\b0  This EULA is effective unless terminated or rejected. This EULA will also terminate immediately and without additional notice in the event you breach this EULA and/or fail to comply with any term or condition of this EULA.\
+\ls1\ilvl0
+\b {\listtext	8.	}CONSENT TO USE OF DATA.
+\b0  You agree that SCS and its affiliates or suppliers may collect and use statistics on your use of the Software Product in performing backup operations and technical information you provide in relation to support services related to the Software Product. SCS and its suppliers agree not to use this information in a form that personally identifies you except to the extent necessary to provide such services.\
+\ls1\ilvl0
+\b {\listtext	9.	}DISCLAIMER OF WARRANTIES.
+\b0 \
+\pard\intbl\itap1\tx940\tx1440\pardeftab720\li1440\fi-1440
+\ls1\ilvl1\cf0 {\listtext	a.	}You acknowledge that the Software Product is for backup and redundancy only, and should not be used as a sole or primary source of storage. YOU AGREE THAT THE USE OF THE SOFTWARE PRODUCT IS AT YOUR SOLE RISK AS TO SATISFACTORY QUALITY PERFORMANCE, ACCURACY AND EFFORT. Use of the Software Product may adversely affect the operation of other software and devices. To the maximum extent permitted under applicable law, the Software Product is offered on an "AS-IS" basis and SCS does NOT warrant that the functions contained in the Software Product will meet your requirements or that the operation of the Software Product will be uninterrupted or error free or that such errors will be corrected. Computer software is inherently subject to bugs and potential incompatibility with other computer software and hardware. You should not use the Software Product for any applications in which failure could cause any significant damage or injury to persons or tangible or intangible property.\
+{\listtext	b.	}EXCEPT AS MAY BE SET OUT IN A SPECIFIC WARRANTY ACCOMPANYING THE SOFTWARE PRODUCT, TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, SCS AND ITS SUPPLIERS PROVIDE THE SOFTWARE PRODUCT AND THIRD PARTY SOFTWARE "AS IS" AND WITH ALL FAULTS AND WITHOUT ANY OTHER WARRANTY OF ANY KIND, AND HEREBY DISCLAIM ALL OTHER WARRANTIES AND CONDITIONS, EITHER EXPRESS, IMPLIED, OR STATUTORY, INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF TITLE AND NON-INFRINGEMENT, ANY IMPLIED WARRANTIES, DUTIES OR CONDITIONS OF MERCHANTABILITY, OF FITNESS FOR A PARTICULAR PURPOSE, AND OF LACK OF VIRUSES ALL WITH REGARD TO THE SOFTWARE PRODUCT AND THIRD PARTY SOFTWARE. NO ORAL OR WRITTEN INFORMATION OR ADVICE GIVEN BY SCS OR A SCS-AUTHORIZED REPRESENTATIVE SHALL CREATE A WARRANTY. Some states/jurisdictions do not allow exclusion of implied warranties or limitations on the duration of implied warranties, so the above disclaimer may not apply to you in its entirety. To the extent applicable law requires SCS to provide warranties, you agree that the scope and duration of such warranty shall be to the minimum extent permitted under such applicable law.\
+{\listtext	c.	}IN NO EVENT DOES SCS PROVIDE ANY WARRANTY OR REPRESENTATIONS WITH RESPECT TO ANY THIRD PARTY HARDWARE OR SOFTWARE WITH WHICH THE SOFTWARE PRODUCT IS DESIGNED TO BE USED, AND SCS DISCLAIMS ALL LIABILITY WITH RESPECT TO ANY FAILURES THEREOF.\
+\pard\intbl\itap1\tx220\tx720\pardeftab720\li720\fi-720
+\ls1\ilvl0
+\b \cf0 {\listtext	10.	}LIMITATION OF LIABILITY. 
+\b0 Notwithstanding any damages that you might incur, the entire liability of SCS and any of its suppliers under any provision of this EULA and your exclusive remedy for all of the foregoing shall be limited to the amount actually paid by you for the Software Product. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL SCS OR ITS SUPPLIERS BE LIABLE FOR ANY SPECIAL, INCIDENTAL, INDIRECT, OR CONSEQUENTIAL DAMAGES WHATSOEVER (INCLUDING, BUT NOT LIMITED TO, DAMAGES FOR LOSS OF PROFITS, FOR LOSS OF DATA OR OTHER INFORMATION, FOR BUSINESS INTERRUPTION, FOR PERSONAL INJURY, FOR LOSS OF PRIVACY ARISING OUT OF OR IN ANY WAY RELATED TO THE USE OF OR INABILITY TO USE THE SOFTWARE PRODUCT, THIRD PARTY SOFTWARE AND/OR THIRD PARTY HARDWARE USED WITH THE SOFTWARE PRODUCT, OR OTHERWISE IN CONNECTION WITH ANY PROVISION OF THIS EULA), EVEN IF SCS OR ANY SUPPLIER HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES AND EVEN IF THE REMEDY FAILS OF ITS ESSENTIAL PURPOSE. Some states/jurisdictions do not allow the exclusion or limitation of incidental or consequential damages, so the above limitation or exclusion may not apply to you.\
+\ls1\ilvl0
+\b {\listtext	11.	}INDEMNITY.
+\b0  You agree to indemnify and hold SCS and its officers, directors, employees and licensors harmless from any claim or demand (including but not limited to reasonable legal fees) made by a third party due to or arising out of or related to your violation of the terms and conditions of this Agreement, your violation of any laws, regulations or third party rights or your negligent act, omission or willful misconduct.\
+\ls1\ilvl0
+\b {\listtext	12.	}U.S. GOVERNMENT CUSTOMERS.
+\b0  The Software Product is a "Commercial Item" as that term is defined in 48 C.F.R. 12.212 or 48 C.F.R. 227.7202, as applicable. Consistent with 48 C.F.R. 12.212 or 48 C.F.R. 227.7202, as applicable, Commercial Computer Software and Commercial Computer Software Documentation are licensed to the U.S. Government users (i) only as Commercial Items and (2) only with those rights granted to other users under this EULA. Unpublished rights are reserved under the copyrights of the United States.\
+\ls1\ilvl0
+\b {\listtext	13.	}COMPLIANCE WITH LAWS.
+\b0  You shall comply with all laws and regulations of the United States and other countries ("Export Laws") to ensure that the Software Product is not (1) exported, directly or indirectly, in violation of Export Laws, or (2) used for any purpose prohibited by Export Laws, including, without limitation, nuclear, chemical, or biological weapons proliferation. You further agree that you will not use the Software Product for any purpose prohibited under applicable law. AGAIN, NOT TO BE USED FOR PROLIFERATION OF NUCLEAR, CHEMICAL OR BIOLOGICAL ARTICLES.\
+\ls1\ilvl0
+\b {\listtext	14.	}APPLICABLE LAW.
+\b0  This EULA is governed by the laws of the State of New South Wales exclusive of conflict of law provisions and you attorn to the jurisdiction of the courts of the province of New South Wales with respect to any proceedings arising from this EULA. The parties hereby agree that this Agreement is not governed by the United Nations Convention on Contracts for the International Sale of Goods.\
+\ls1\ilvl0
+\b {\listtext	15.	}ENTIRE AGREEMENT.
+\b0  This EULA is the entire agreement between you and SCS relating to the Software Product and it supersedes all prior or contemporaneous oral or written communications, proposals and representations with respect to the Software Product or any other subject matter covered by this EULA. To the extent the terms of any SCS policies or programs for support services conflict with the terms of this EULA, the terms of this EULA shall control. In the event of a conflict between the English and any non-English versions of this EULA, the English version shall govern. If any provision of this EULA is held by a court of competent jurisdiction to be contrary to law, such provision will be changed and interpreted so as to best accomplish the objectives of the original provision to the fullest extent allowed by law and the remaining provision of the EULA will remain in force and effect. Sections 5, 6, 9, 10, 11, 14 and 15 shall survive termination of this EULA.\
+\ls1\ilvl0
+\b {\listtext	16.	}ENOUGH FROM THE LAWYERS. 
+\b0 We\'92s at Sudo-Code Software would also like to thank you for playing/using our software. If on the off-chance you are using this against the terms of the agreement, we prefer you not (that, and it\'92s an offense of EULA). Our coder wanted to have a clause outlining a situation in which he can eat your guts if you pirate the game, we left that out because then we would literally have to eat your guts, get charged with cannibalism and put away in an asylum. So instead, we would like to enforce our legal right to be very disappointed in you, which brings us to our first sub-clause:\
+\pard\intbl\itap1\tx940\tx1440\pardeftab720\li1440\fi-1440
+\ls1\ilvl1
+\b \cf0 {\listtext	a.	}Guilt. 
+\b0 Did you do something wrong or against the EULA? If so, we aren\'92t angry, we\'92re just disappointed.\cell \lastrow\row
+}

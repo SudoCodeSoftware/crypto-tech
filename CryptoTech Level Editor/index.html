@@ -1,0 +1,301 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>hello phaser!</title>
+        <script src="phaser.min.js"></script>
+    </head>
+    <body>
+
+    <script type="text/javascript">
+
+    window.onload = function() {
+        
+        //////////////////////
+        // START OF GLOBALS //
+        //////////////////////
+        
+        var game = new Phaser.Game(400, 600, Phaser.AUTO, '', { preload: preload, create: create, update: update});
+        
+        TileOptions = {
+            EMPTY: "0_Empty",
+            NODE: "1_Node",
+            START: "2_Start",
+            SERVER: "3_Server",
+            END: "4_End",
+            AI: "5_AI",
+            ZWI: "6_ZWI"
+        };
+        
+        Connections = {
+            EMPTY: '7_Empty',
+            HORIZONTAL: '8_Horizontal',
+            VERTICAL: '9_Vertical',
+            DIAGONAL: '!_Diagonal'  //This should never be in the save file as there are two types (\ and /)
+        };
+        
+        ArrayElementType = {
+            TILE: "Tile",
+            HORIZ_CON: "Horizontal Connection",
+            VERT_CON: "Vertical Connection",
+            DIAG_CON: "Diagonal Connection"
+        };
+        
+        //This grid includes the tiles themselves and the connections between them
+        var gridSizeX = 5;
+        var gridSizeY = 8;
+        var smallTileRatioX = 0.5;  //What the width of the normal tile is multiplied by to get the width of the small tile
+        var smallTileRatioY = 0.5;  //What the height of the normal tile is multiplied by to get the height of the small tile
+        var tileWidth = (game.width * (1 + smallTileRatioX)) / (gridSizeX + 2 * gridSizeX * smallTileRatioX - smallTileRatioX);   //Get the right width and height
+        var tileHeight = (game.height * (1 + smallTileRatioY)) / (gridSizeY + 2 * gridSizeY * smallTileRatioY - smallTileRatioY);   //to fit into the screen
+        var smallTileWidth = tileWidth * (smallTileRatioX / (1 + smallTileRatioX));
+        var smallTileHeight = tileHeight * (smallTileRatioY / (1 + smallTileRatioY));
+        
+        var grid = new Array(gridSizeX * 2 - 1);    //Including the small tiles so x2 and take off 1 (the edges)
+        
+        //Initialize the grid
+        for (var x = 0; x < gridSizeX * 2 - 1; x++) {
+            grid[x] = new Array(gridSizeY * 2 - 1);
+        }
+        
+        var currentTileChoice = TileOptions.EMPTY;  //Which tile is currently selected to be placed
+        var tileChoiceText;   //Text desplaying the currentTileChoice
+        
+        var DiagConDirs = {
+            DIAG_LEFT: 'b',    //This means "/"
+            DIAG_RIGHT: 'c'   //This means "\"
+        };
+        
+        var currentDiagConDir = DiagConDirs.DIAG_RIGHT;  //Which direction a diagonal connection tile will be placed
+        
+        var conDelMode = false;
+        
+        ////////////////////
+        // END OF GLOBALS //
+        ////////////////////
+        
+        function preload () {
+            game.load.image(TileOptions.EMPTY, "res/emptyTile.png");
+            game.load.image(TileOptions.NODE, "res/node.png");
+            game.load.image(TileOptions.START, "res/start.png");
+            game.load.image(TileOptions.SERVER, "res/serverTile.png");
+            game.load.image(TileOptions.END, "res/end.png");
+            game.load.image(TileOptions.AI, "res/aiTile.png");
+            game.load.image(TileOptions.ZWI, "res/ZWI.png");
+            
+            game.load.image(Connections.EMPTY, "res/emptyTile.png");
+            game.load.image(DiagConDirs.DIAG_LEFT, "res/dilConnection.png");
+            game.load.image(DiagConDirs.DIAG_RIGHT, "res/dirConnection.png");
+            game.load.image(Connections.HORIZONTAL, "res/horConnection.png");
+            game.load.image(Connections.VERTICAL, "res/virConnection.png");
+        }
+        
+        function create() {
+            
+            game.stage.backgroundColor = '#3366FF';
+            
+            for (var x = 0; x < gridSizeX * 2 - 1; x++) {
+                for (var y = 0; y < gridSizeY * 2 - 1; y++) {
+                    if (x % 2 == 0 && y % 2 == 0) { //Tile
+                        grid[x][y] = game.add.sprite(tileWidth * (x / 2) + smallTileWidth * (x / 2), tileHeight * (y / 2) + smallTileHeight * (y / 2), TileOptions.EMPTY);
+                        grid[x][y].width = tileWidth;
+                        grid[x][y].height = tileHeight;
+                        grid[x][y].type = ArrayElementType.TILE;
+                        grid[x][y].inputEnabled = true;
+                        grid[x][y].events.onInputDown.add(tileClicked, this);
+                    }
+                    
+                    else if (x % 2 != 0 || y % 2 != 0) {    //Connection
+                        grid[x][y] = game.add.sprite(tileWidth * (x / 2) + smallTileWidth * (x / 2 + 1), tileHeight * (y / 2) + smallTileHeight * (y / 2 + 1), Connections.EMPTY);
+                        grid[x][y].width = smallTileWidth;
+                        grid[x][y].height = smallTileHeight;
+                        
+                        if (x % 2 != 0 && y % 2 != 0) {
+                            grid[x][y].direction = Connections.DIAGONAL;
+                            grid[x][y].type = ArrayElementType.DIAG_CON;
+                        }
+                        
+                        else if (x % 2 != 0 && y % 2 == 0) {
+                            grid[x][y].direction = Connections.HORIZONTAL;
+                            grid[x][y].type = ArrayElementType.HORIZ_CON;
+                        }
+                        
+                        else if (x % 2 == 0 && y % 2 != 0) {
+                            grid[x][y].direction = Connections.VERTICAL;
+                            grid[x][y].type = ArrayElementType.VERT_CON;
+                        }
+                        
+                        grid[x][y].inputEnabled = true;
+                        grid[x][y].events.onInputDown.add(connectionClicked, this);
+                    }
+                }
+            }
+            
+            tileChoiceText = game.add.text(0, 0, "", { fill: '#55ff55' });
+            tileChoiceText.text = currentTileChoice;
+            
+            var key0 = game.input.keyboard.addKey(Phaser.Keyboard.ZERO);
+            key0.onDown.add(zeroPressed, this);
+            
+            var key1 = game.input.keyboard.addKey(Phaser.Keyboard.ONE);
+            key1.onDown.add(onePressed, this);
+            
+            var key2 = game.input.keyboard.addKey(Phaser.Keyboard.TWO);
+            key2.onDown.add(twoPressed, this);
+            
+            var key3 = game.input.keyboard.addKey(Phaser.Keyboard.THREE);
+            key3.onDown.add(threePressed, this);
+            
+            var key4 = game.input.keyboard.addKey(Phaser.Keyboard.FOUR);
+            key4.onDown.add(fourPressed, this);
+            
+            var key5 = game.input.keyboard.addKey(Phaser.Keyboard.FIVE);
+            key5.onDown.add(fivePressed, this);
+            
+            var key6 = game.input.keyboard.addKey(Phaser.Keyboard.SIX);
+            key6.onDown.add(sixPressed, this);
+            
+            var keyQ = game.input.keyboard.addKey(Phaser.Keyboard.Q);
+            keyQ.onDown.add(qPressed, this);
+            
+            var keyW = game.input.keyboard.addKey(Phaser.Keyboard.W);
+            keyW.onDown.add(wPressed, this);
+            
+            var keyS = game.input.keyboard.addKey(Phaser.Keyboard.S);
+            keyS.onDown.add(sPressed, this);
+            
+            var keyO = game.input.keyboard.addKey(Phaser.Keyboard.O);
+            keyO.onDown.add(oPressed, this);
+            
+            var keyD = game.input.keyboard.addKey(Phaser.Keyboard.D);
+            keyD.onDown.add(dPressed, this);
+        }
+        
+        function zeroPressed() {
+            currentTileChoice = TileOptions.EMPTY;
+            tileChoiceText.text = currentTileChoice;
+        }
+        
+        function onePressed() {
+            currentTileChoice = TileOptions.NODE;
+            tileChoiceText.text = currentTileChoice;
+        }
+        
+        function twoPressed() {
+            currentTileChoice = TileOptions.START;
+            tileChoiceText.text = currentTileChoice;
+        }
+        
+        function threePressed() {
+            currentTileChoice = TileOptions.SERVER;
+            tileChoiceText.text = currentTileChoice;
+        }
+        
+        function fourPressed() {
+            currentTileChoice = TileOptions.END;
+            tileChoiceText.text = currentTileChoice;
+        }
+        
+        function fivePressed() {
+            currentTileChoice = TileOptions.AI;
+            tileChoiceText.text = currentTileChoice;
+        }
+        
+        function sixPressed() {
+            currentTileChoice = TileOptions.ZWI;
+            tileChoiceText.text = currentTileChoice;
+        }
+        
+        function qPressed() {
+            currentDiagConDir = DiagConDirs.DIAG_LEFT;
+        }
+        
+        function wPressed() {
+            currentDiagConDir = DiagConDirs.DIAG_RIGHT;
+        }
+        
+        function dPressed() {
+            conDelMode = !conDelMode;
+        }
+        
+        //Taken from some stack overflow answer...the saveAs function wasn't working in chrome
+        //It's ignoringt the filename argument but I'm too lazy to work it out. This this isn't
+        //going to be deployed and it doesn't matter at all what the damn file is called initally,
+        //it should be changed anyway
+        function download(filename, text) {
+            var pom = document.createElement('a');
+            pom.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+            pom.setAttribute("download", filename);
+            pom.click();
+        }
+        
+        function sPressed() {   //Save
+            var output = "";    //Stuff to save
+            output += "1:";  //Version
+            output += grid.length.toString() + ":";   //width of the grid
+            output += grid[0].length.toString() + ":";    //height of the grid
+            
+            for (var y = 0; y < grid[0].length; y++) {
+                for (var x = 0; x < grid.length; x++) {
+                    output += grid[x][y].key[0];
+                }
+            }
+            
+            download("SaveFile.txt", output);
+        }
+        
+        //Once again, taken from a stack overflow answer (javascript file io is retarded)
+        function readTextFile(file)
+        {
+            var rawFile = new XMLHttpRequest();
+            rawFile.open("GET", file, false);
+            rawFile.onreadystatechange = function ()
+            {
+                if(rawFile.readyState === 4)
+                {
+                    if(rawFile.status === 200 || rawFile.status == 0)
+                    {
+                        var allText = rawFile.responseText;
+                        alert(allText);
+                    }
+                }
+            }
+            rawFile.send(null);
+        }
+        
+        function oPressed() {   //Open
+            var file = readTextFile(prompt("Type the filename"));
+            console.log(file);
+        }
+        
+        function tileClicked(sprite, pointer) {
+            sprite.loadTexture(currentTileChoice, 0);
+            sprite.width = tileWidth;
+            sprite.height = tileHeight;
+        }
+        
+        function connectionClicked(sprite, pointer) {
+            if (conDelMode) {
+                sprite.loadTexture(Connections.EMPTY);
+            }
+            
+            else if (sprite.direction == Connections.DIAGONAL) {
+                sprite.loadTexture(currentDiagConDir, 0);
+            }
+            
+            else {
+                sprite.loadTexture(sprite.direction, 0);
+            }
+            
+            sprite.width = smallTileWidth;  //Resize it to the proper size
+            sprite.height = smallTileHeight;
+        }
+        
+        function update() {
+            
+        }
+    };
+    </script>
+
+    </body>
+</html>
